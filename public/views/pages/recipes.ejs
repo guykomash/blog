@@ -1,3 +1,8 @@
 <h2>Recipes</h2>
+<ul>
+    <% recipes.forEach(function(recipe){ %>
+      <%- include('user/show', {user: user}) %>
+    <% }); %>
+  </ul>
 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 <br>
