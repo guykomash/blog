@@ -1,10 +1,10 @@
 import Fastify from "fastify";
+import path from "path";
+import ejs from 'ejs';
 import fastifyView from '@fastify/view';
 import fastifyStatic from '@fastify/static';
-import ejs from 'ejs';
-import path from "path";
 import { fileURLToPath } from "url";
-
+import recipes from "./recipes.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -25,7 +25,7 @@ fastify.get('/', (req, reply) => {
 });
 
 fastify.get('/recipes', (req, reply) => {
-  reply.view('pages/recipes.ejs');
+  reply.view('pages/recipes.ejs', { recipes });
 });
 
 fastify.get('/posts', (req, reply) => {

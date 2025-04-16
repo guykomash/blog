@@ -1,8 +1,11 @@
 <h2>Recipes</h2>
-<ul>
+<div class="recipe-grid">
     <% recipes.forEach(function(recipe){ %>
-      <%- include('user/show', {user: user}) %>
+        <div class="recipe-card">
+            <img src="<%= recipe.image %>" alt="<%= recipe.title %>" class="recipe-image">
+            <!-- <h3><%= recipe.title %></h3>
+            <h3><%= recipe.image  %></h3> -->
+        </div>
     <% }); %>
-  </ul>
-<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 <br>
