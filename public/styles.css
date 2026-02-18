@@ -53,7 +53,7 @@ header h1 {
   font-weight: 400;
   font-style: normal;
   margin: 0; 
-  font-size: 5rem;
+  font-size: 6rem;
   flex-grow: 1;
   text-align: center; /* Center the text inside the h1 */
 }
@@ -203,7 +203,8 @@ footer p {
   font-family: "Fira Sans", sans-serif;
   font-weight: 100;
   font-style: normal;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+  margin-top: 10px;
   color: #dcdcdc;
 }
 
@@ -283,19 +284,9 @@ footer nav li a {
   .post-grid {
     grid-template-columns: 1fr;
   }
-}
-
-/* Scrollbar styles */
-
-::-webkit-scrollbar-track {
-  background: #153147; /* Color of the scrollbar thumb */
-  border-radius: 10px; /* Rounded corners for the track */
-}
-
-::-webkit-scrollbar-thumb {
-  background: #f4f4f4; /* Background of the scrollbar track */
-  border-radius: 10px; /* Rounded corners for the thumb */
-  border: 3px solid #f4f4f4; /* Adds padding around the thumb */
+  header h1 {
+    font-size: 4.3rem;
+  }
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -306,15 +297,6 @@ footer nav li a {
 @media (max-width: 600px) {
   .toggle-side-panel {
     display: block;
-  }
-
-  header h1 {
-    font-size: 3rem;
-  }
-  header h2 {
-    font-size: 1.4rem;
-    margin-top: -7px;
-    margin-left: -45px;
   }
 }
 
@@ -443,4 +425,31 @@ footer nav li a {
   font-family: "Modak", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.banner-container {
+  position: sticky;
+  overflow: hidden;
+  white-space: nowrap;
+  background: white;
+  color: black;
+  padding: 10px;
+  font-family: "Bungee", sans-serif;
+  
+}
+
+.banner-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 14s linear infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
