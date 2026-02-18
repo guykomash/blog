@@ -9,7 +9,7 @@ const allPosts = await getCollection("posts");
   {
     allPosts.map((post) => (
       <div id={post.id} class="post-card">
-        <a href={`posts/${post.id}`}>
+        <a href={`/blog/posts/${post.id}`}>
           <img
             class="post-image"
             src={`../images/${post.data.image}`}
