@@ -1,6 +1,6 @@
 ---
 import Layout from "./Layout.astro";
-
+import postImage from "../../images/1/newRoccbox.jpg";
 const { frontmatter } = Astro.props;
 ---
 
@@ -13,7 +13,7 @@ const { frontmatter } = Astro.props;
     <!-- Markdown content is injected here -->
     <img
       class="post-page-image"
-      src={`../../images/${frontmatter.image}`}
+      src={postImage.src}
       alt={frontmatter.image}
     />
   </div>
