@@ -7,7 +7,6 @@ const posts = await getCollection("posts");
 ---
 
 <Layout>
-  <h2>Home Page</h2>
   <div class="post-grid">
     {
       posts.map((post) => (
@@ -19,6 +18,7 @@ const posts = await getCollection("posts");
               alt={post.data.title}
               title={post.data.title}
             />
+            <h2>{post.data.title}</h2>
           </a>
         </div>
       ))
@@ -42,15 +42,29 @@ const posts = await getCollection("posts");
     border-radius: 8px;
     overflow: hidden;
     background-color: #f9f9f9;
+    aspect-ratio: 3 / 4;
     max-width: 500px;
-    max-height: 550px;
     place-self: center;
-    /* width: 100%; */
+    position: relative;
+    width: 100%;
   }
 
   .post-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+  }
+
+  .post-card h2 {
+    position: absolute;
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    /* outline: 2px solid #000; */
+    padding: 20px;
+    z-index: 2;
+    text-align: center;
+    font-size: 4rem;
+    height: auto;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
   }
 </style>

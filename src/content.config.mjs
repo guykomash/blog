@@ -9,7 +9,6 @@ const posts = defineCollection({
       title: z.string(),
       description: z.string(),
       publishDate: z.coerce.date(),
-      author: z.string(),
       coverImage: image(),
     }),
 });

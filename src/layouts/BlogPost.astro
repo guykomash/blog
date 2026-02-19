@@ -4,7 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import Layout from "./Layout.astro";
 
 type Props = CollectionEntry<"posts">["data"];
-const { title, description, publishDate, coverImage, author } = Astro.props;
+const { title, description, publishDate, coverImage } = Astro.props;
 ---
 
 <Layout>
@@ -12,7 +12,6 @@ const { title, description, publishDate, coverImage, author } = Astro.props;
     <h1>{title}</h1>
     <Image class="post-page-image" src={coverImage} alt={title} />
   </div>
-  <h2>Post author: {author}</h2>
   <p>{description}</p>
   <p>{publishDate}</p>
   <slot />
