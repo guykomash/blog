@@ -13,7 +13,7 @@ const formatDate = (publishDate: Date) => {
     publishDate.getMonth() + 1 < 10
       ? `0${publishDate.getMonth() + 1}`
       : publishDate.getMonth() + 1;
-  const day = publishDate.getDate();
+  const day = publishDate.getDate() < 10 ? `0${publishDate.getDate()}` : publishDate.getDate();
 
   return `${day}/${month}/${year}`;
 };
